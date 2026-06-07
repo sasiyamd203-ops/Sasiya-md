@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASIYA-MD BOT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="menu-overlay" id="menuOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 90; display: none;"></div>
+
+    <div class="main-wrapper">
+        <div class="top-bar">
+            <div class="server-status">
+                <span class="status-dot"></span> SERVER ONLINE
+            </div>
+            <div class="menu-btn" id="menuToggleBtn">
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+            </div>
+        </div>
+
+        <div class="side-menu" id="sideMenu">
+            <h1 class="menu-main-title">MENU</h1>
+            
+            <div class="menu-options">
+                <button class="menu-opt-btn" id="versionBtn">VERSION</button>
+                <div class="menu-info-box" id="versionInfo">v1</div>
+
+                <button class="menu-opt-btn" id="manualBtn">USER MANUAL</button>
+                <div class="menu-info-box" id="manualInfo">First generate code. Next go to WhatsApp link device and link our bot and enjoy!</div>
+
+                <button class="menu-opt-btn" id="contactBtn">CONTACT US</button>
+                <div class="menu-info-box" id="contactInfo">Owner: SASINDU THIWANKA<br>Number: 0765530453<br><span style="color: #2ecc71;">Available on WhatsApp</span></div>
+            </div>
+
+            <div class="menu-footer">Powered by SASIYA</div>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-circle">
+                <img src="bot.jpg" alt="Bot Profile" class="profile-img">
+            </div>
+            <h1 class="bot-title">SASIYA-MD</h1>
+            <p class="owner-info">POWERED BY SASIYA-MD • BY SASINDU THIWANKA</p>
+        </div>
+
+        <div class="pairing-panel">
+            
+            <div class="tabs-container">
+                <button class="tab-btn active" id="pairTabBtn">PAIR CODE</button>
+                <button class="tab-btn" id="qrTabBtn">QR CODE</button>
+            </div>
+
+            <h3 class="system-heading">PAIRING SYSTEM</h3>
+
+            <div id="pairCodeView">
+                <div class="input-container">
+                    <div class="country-code">🇱🇰 +94</div>
+                    <input type="tel" class="phone-input" placeholder="7XXXXXXXX" maxlength="9">
+                </div>
+
+                <button class="btn" id="linkBtn">GET CODE</button>
+
+                <div class="loader-container" id="loaderContainer" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <p style="color: #ff0000; font-size: 12px; margin-top: 10px; letter-spacing: 1px;">GENERATING CODE...</p>
+                </div>
+
+                <div class="status-box" id="statusBox" style="display: none;">
+                    <p class="pairing-hd" id="statusHeading">YOUR PAIRING CODE</p>
+                    <div class="code-wrapper" id="codeWrapper">
+                        <span class="code-text" id="codeText"></span>
+                        <button id="copyBtn" class="copy-btn">📋 Copy</button>
+                    </div>
+                    <p class="congrats" id="congratsText">🎉 Congratulations! Code Generated.</p>
+                </div>
+            </div>
+
+            <div id="qrCodeView" style="display: none;">
+                <div class="qr-center-box">
+                    <div class="qr-code-display">🔳</div> 
+                    <p class="qr-congrats">🎉 Congratulations! You got QR Code.</p>
+                </div>
+            </div>
+
+            <div class="panel-footer-brand">POWERED BY SASIYA-MD</div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
