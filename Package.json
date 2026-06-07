@@ -1,0 +1,19 @@
+{
+  "name": "whatsapp-pairing-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp Bot with Web Pairing and Media Commands",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.6.0",
+    "@distube/ytdl-core": "^4.13.5",
+    "express": "^4.19.2",
+    "pino": "^9.0.0",
+    "yt-search": "^2.10.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
