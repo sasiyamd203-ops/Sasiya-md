@@ -93,13 +93,14 @@ async function startWhatsAppBot() {
             const uptimeMs = Date.now() - startTime;
             const uptime = new Date(uptimeMs).toISOString().substr(11, 8);
             // RAM ප්‍රමාණය ගණනය කිරීම
-            const ram = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB";
-
+            const ram = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB";         
+            
             // 1. MENU COMMAND
             if (command === '.menu') {
-                const menuText = `👋 *ʜɪ* Sasindu \n\n*╭─「 BOT'S MENU 」*\n*│*👾 *\`Bot`*: *sasindu-md 𝗕𝗼𝘁*\n*│*👤 *\`User`*: Sasindu Xz !!\n*│*☎️ *\`Owners`*: *sasiyaッ*\n*│*⏰ *\`Uptime`*: ${uptime}\n*│*📂 *\`Ram`*: ${ram}\n*│*✒️ *\`Prefix`*: .\n╰──────────●●►\n\n╭───「 *COMMANDS* 」\n│  .yt <youtube-link>\n│  .song <song-name>\n╰────────────●\n\n©️ SASIYA-MD WHATAPP BOT 🔥ッ`;
+                const menuText = `👋 *ʜɪ* Sasindu \n\n*╭─「 BOT'S MENU 」*\n*│*👾 *Bot*: *sasindu-md 𝗕𝗼𝘁*\n*│*👤 *User*: Sasindu Xz !!\n*│*☎️ *Owners*: *sasiyaッ*\n*│*⏰ *Uptime*: ${uptime}\n*│*📂 *Ram*: ${ram}\n*│*✒ *Prefix*: .\n╰──────────●●►\n\n╭───「 *COMMANDS* 」\n│  .yt <youtube-link>\n│  .song <song-name>\n╰────────────●\n\n©️ SASIYA-MD WHATAPP BOT 🔥ッ`;
                 await sock.sendMessage(from, { text: menuText }, { quoted: mek });
             }
+
 
             // 2. ALIVE COMMAND
             if (command === '.alive') {
@@ -166,7 +167,7 @@ async function startWhatsAppBot() {
 
                     ytdl(selectedUrl, { filter: 'audioonly', quality: 'highestaudio' })
                         .pipe(fs.createWriteStream(audioPath))
-                        .on('finish', async () => {
+                     y   .on('finish', async () => {
                             await sock.sendMessage(from, { 
                                 audio: fs.readFileSync(audioPath), 
                                 mimetype: 'audio/mp4', 
